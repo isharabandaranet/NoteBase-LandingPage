@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteBase | Your Ultimate Academic Workspace</title>
+    <meta name="description" content="Organize your studies, write Notion-style notes, plan with Pomodoro, and collaborate with classmates on NoteBase. Created by Ishara Bandara.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Script -->
+    <script defer src="app.js"></script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon-container">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" /></svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-text-note">Note</span><span class="logo-text-base">Base</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">Process</a>
+                <a href="#playground" class="nav-link">Playground</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="https://notebase.isharabandara.com" class="btn btn-primary btn-nav">Launch App</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Your Ultimate <span class="text-gradient">Academic Workspace</span></h1>
+                <p class="hero-subtitle">Organize study modules, write Notion-style customized notes, upload lecture slides and past papers, study efficiently with your personal AI Tutor, and collaborate with batchmates.</p>
+                <div class="hero-ctas">
+                    <a href="https://notebase.isharabandara.com/sign-up" class="btn btn-primary btn-lg">Get Started Free</a>
+                    <a href="#playground" class="btn btn-secondary btn-lg">Try Live Playground</a>
+                </div>
+                <div class="hero-footer-notes">
+                    <span><svg class="icon-small" style="color: #a78bfa;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg> Advanced AI Tutor</span>
+                    <span><svg class="icon-small" style="color: #60a5fa;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg> Google Drive Sync</span>
+                    <span><svg class="icon-small" style="color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg> Secured by Clerk</span>
+                </div>
+            </div>
+
+            <!-- Visual Mockup Card -->
+            <div class="hero-visual">
+                <div class="mockup-frame">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="mockup-search">
+                            <span>notebase.isharabandara.com</span>
+                        </div>
+                    </div>
+                    <div class="mockup-body">
+                        <!-- Dashboard Mock -->
+                        <div class="mock-sidebar">
+                            <div class="mock-logo">
+                                <div class="logo-icon-container" style="padding: 4px; border-radius: 6px; box-shadow: none;">
+                                    <svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" /></svg>
+                                </div>
+                                <span style="font-weight: 800; font-size: 14px; margin-left: 6px; letter-spacing: -0.3px;"><span style="color: var(--color-text-dark);">Note</span><span style="color: #2563eb;">Base</span></span>
+                            </div>
+                            <div class="mock-nav-item active">
+                                <svg class="icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>My Workspace
+                            </div>
+                            <div class="mock-nav-item">
+                                <svg class="icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Planner
+                            </div>
+                            <div class="mock-nav-item">
+                                <svg class="icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>Community
+                            </div>
+                            <div class="mock-divider"></div>
+                            <div class="mock-section-title">Modules</div>
+                            <div class="mock-nav-subitem">
+                                <svg class="icon-sidebar" style="color: #60a5fa;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Computer Architecture
+                            </div>
+                            <div class="mock-nav-subitem">
+                                <svg class="icon-sidebar" style="color: #c084fc;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>Discrete Math
+                            </div>
+                            <div class="mock-nav-subitem">
+                                <svg class="icon-sidebar" style="color: #38bdf8;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>Web Development
+                            </div>
+                        </div>
+                        <div class="mock-content">
+                            <div class="mock-content-header">
+                                <div>
+                                    <h3>My Workspace</h3>
+                                    <p>Select a module to organize files</p>
+                                </div>
+                                <span class="mock-add-btn">+ Add Module</span>
+                            </div>
+                            
+                            <div class="mock-cards">
+                                <div class="mock-card">
+                                    <div class="mock-card-drag">⋮⋮</div>
+                                    <h4>Computer Architecture</h4>
+                                    <div class="mock-card-stats">
+                                        <span><svg class="icon-stat" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>14 Notes</span>
+                                        <span><svg class="icon-stat" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.168.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.168.477-4.5 1.253"></path></svg>8 Papers</span>
+                                    </div>
+                                </div>
+                                <div class="mock-card">
+                                    <div class="mock-card-drag">⋮⋮</div>
+                                    <h4>Discrete Math</h4>
+                                    <div class="mock-card-stats">
+                                        <span><svg class="icon-stat" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>9 Notes</span>
+                                        <span><svg class="icon-stat" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.168.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.168.477-4.5 1.253"></path></svg>5 Papers</span>
+                                    </div>
+                                </div>
+                                <div class="mock-card">
+                                    <div class="mock-card-drag">⋮⋮</div>
+                                    <h4>Web Development</h4>
+                                    <div class="mock-card-stats">
+                                        <span><svg class="icon-stat" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>23 Notes</span>
+                                        <span><svg class="icon-stat" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.168.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.168.477-4.5 1.253"></path></svg>12 Papers</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Powerful Features</span>
+                <h2 class="section-title">Designed for modern student workflows</h2>
+                <p class="section-subtitle">Ditch the messy folders and disjointed tools. NoteBase centralizes your entire study cycle in one responsive web workspace.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1: Workspace & Modules -->
+                <div class="feature-card">
+                    <div class="feature-icon bg-blue-light">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3>Module Workspace</h3>
+                    <p>Organize your academic syllabus into clean, color-coded Modules. Rearrange modules via intuitive drag-and-drop handles and track note counts in real-time.</p>
+                    <ul class="feature-bullets">
+                        <li>Optimistic UI for instant updates</li>
+                        <li>Drag & Drop module sorting</li>
+                        <li>Quick file and note count indicators</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: Notion-style editor -->
+                <div class="feature-card">
+                    <div class="feature-icon bg-indigo-light">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                    </div>
+                    <h3>Notion-Style Editor</h3>
+                    <p>Author clean markdown notes with premium cover gradients and custom emoji icons. Edit content with heading hierarchies, lists, color highlights, and inline attachments.</p>
+                    <ul class="feature-bullets">
+                        <li>Automatic 1.5s debounce autosave</li>
+                        <li>Notion-like cover picking & emoji select</li>
+                        <li>In-note image and PDF attachments</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: Cloud Uploads Vault -->
+                <div class="feature-card">
+                    <div class="feature-icon bg-blue-light" style="color: #2563eb; background-color: rgba(37, 99, 235, 0.1);">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                    </div>
+                    <h3>Document Vaults</h3>
+                    <p>Upload PDF lecture notes, study slides, and past papers (organized by academic year). Sync files to Firebase Storage and Google Drive directly from your dashboard.</p>
+                    <ul class="feature-bullets">
+                        <li>Drag & drop PDF uploads (up to 5 MB)</li>
+                        <li>Organize past papers by year</li>
+                        <li>Real-time storage limit monitoring</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 4: Focus & Productivity Planner -->
+                <div class="feature-card">
+                    <div class="feature-icon bg-red-light">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3>Focus Planner</h3>
+                    <p>Supercharge your revision sessions using the integrated Pomodoro focus timer. Manage today's task checklist, track deadlines, and visualize your weekly study progress charts.</p>
+                    <ul class="feature-bullets">
+                        <li>Focus, Short Break, Long Break states</li>
+                        <li>Daily interactive task list manager</li>
+                        <li>Upcoming deadlines & weekly study analytics</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 5: NoteBase AI Tutor -->
+                <div class="feature-card">
+                    <div class="feature-icon bg-indigo-light" style="color: #8b5cf6; background-color: rgba(139, 92, 246, 0.1);">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                    </div>
+                    <h3>NoteBase AI Tutor</h3>
+                    <p>Chat directly with your uploaded notes. Ask the AI to summarize complex concepts, generate custom practice MCQ quizzes, outline study plans, or solve tricky math equations.</p>
+                    <ul class="feature-bullets">
+                        <li>Instant PDF document summarization</li>
+                        <li>Auto-generated practice MCQ quizzes</li>
+                        <li>Renders mathematical LaTeX formulas</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 6: Student Community Feed -->
+                <div class="feature-card">
+                    <div class="feature-icon bg-green-light">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3>Batchmate Community</h3>
+                    <p>Connect with classmates by sharing study sheets and resource links. Discover highly rated peer files on the trending leaderboard and toggling profile visibility.</p>
+                    <ul class="feature-bullets">
+                        <li>Public vault sharing & community feed</li>
+                        <li>Trending notes leaderboard rankings</li>
+                        <li>Granular privacy settings (Private vs Public)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (Process) Section -->
+    <section class="section process-section" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Process Flow</span>
+                <h2 class="section-title">Streamline your learning in four steps</h2>
+                <p class="section-subtitle">Follow this step-by-step process to organize, author, and master your university studies with NoteBase.</p>
+            </div>
+            
+            <div class="process-grid">
+                <!-- Step 1 -->
+                <div class="process-card">
+                    <div class="process-step-num">01</div>
+                    <div class="process-icon">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+                    </div>
+                    <h3>Sign Up</h3>
+                    <p>Create your free student account in seconds using secured Clerk Auth. No credit card required to start.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-card">
+                    <div class="process-step-num">02</div>
+                    <div class="process-icon">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                    </div>
+                    <h3>Create Modules</h3>
+                    <p>Organize your academic semesters or modules into dedicated workspaces with custom colors.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-card">
+                    <div class="process-step-num">03</div>
+                    <div class="process-icon">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3>Add Notes</h3>
+                    <p>Write Notion-style markdown note summaries, drag & drop slide PDFs, or sync documents via Google Drive.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-card">
+                    <div class="process-step-num">04</div>
+                    <div class="process-icon">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </div>
+                    <h3>Study with AI</h3>
+                    <p>Chat directly with your notes, auto-generate quiz MCQs, solve equations, and study smarter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playground Section -->
+    <section class="section playground-section" id="playground">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Interactive Sandbox</span>
+                <h2 class="section-title">Try the core features right now</h2>
+                <p class="section-subtitle">Experience NoteBase’s interactive feel without creating an account. Interact with the Pomodoro timer, Module Organizer, Task Checklist, and AI Assistant simulators below.</p>
+            </div>
+
+            <div class="playground-grid">
+                <!-- Card 1: Live Pomodoro Box -->
+                <div class="sandbox-card pomodoro-sandbox">
+                    <div class="sandbox-card-header">
+                        <span class="sandbox-badge red-badge">
+                            <svg class="icon-small" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Focus Timer
+                        </span>
+                        <h3>Focus Timer</h3>
+                    </div>
+                    <div class="sandbox-box pomodoro-timer-box">
+                        <div class="timer-modes">
+                            <button class="timer-mode-btn active" data-mode="focus">Focus</button>
+                            <button class="timer-mode-btn" data-mode="shortBreak">Short Break</button>
+                            <button class="timer-mode-btn" data-mode="longBreak">Long Break</button>
+                        </div>
+                        <div class="timer-display" id="timerDisplay">25:00</div>
+                        <div class="timer-controls">
+                            <button class="btn btn-primary" id="timerStartBtn">Start</button>
+                            <button class="btn btn-secondary" id="timerResetBtn">Reset</button>
+                        </div>
+                    </div>
+                    <div class="sandbox-desc">
+                        <p>The standard Pomodoro method helps sustain peak focus. Once you create an account, NoteBase tracks your weekly study duration and graphs it dynamically.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Live Module Creator Box -->
+                <div class="sandbox-card module-sandbox">
+                    <div class="sandbox-card-header">
+                        <span class="sandbox-badge blue-badge">
+                            <svg class="icon-small" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg> Module Organizer
+                        </span>
+                        <h3>Module Organizer</h3>
+                    </div>
+                    <div class="sandbox-box todo-box">
+                        <div class="todo-input-row">
+                            <input type="text" id="sandboxModuleInput" placeholder="Add custom module..." aria-label="New module name">
+                            <button class="btn btn-primary" id="sandboxModuleAddBtn">+</button>
+                        </div>
+                        <ul class="todo-list" id="sandboxModuleList">
+                            <!-- Injected by JS -->
+                        </ul>
+                    </div>
+                    <div class="sandbox-desc">
+                        <p>Organize your academic syllabus into modules. In the actual app, you can upload past papers and typed slides directly under each corresponding Module folder.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Live Task Checklist Box -->
+                <div class="sandbox-card checklist-sandbox">
+                    <div class="sandbox-card-header">
+                        <span class="sandbox-badge orange-badge">
+                            <svg class="icon-small" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg> Task Checklist
+                        </span>
+                        <h3>Task Checklist</h3>
+                    </div>
+                    <div class="sandbox-box checklist-box">
+                        <div class="todo-input-row">
+                            <input type="text" id="sandboxTaskInput" placeholder="Add study task..." aria-label="New task name">
+                            <button class="btn btn-primary" id="sandboxTaskAddBtn">+</button>
+                        </div>
+                        <ul class="todo-list" id="sandboxTaskList">
+                            <!-- Injected by JS -->
+                        </ul>
+                    </div>
+                    <div class="sandbox-desc">
+                        <p>Plan your study sessions and track daily targets. NoteBase helps you align checklist tasks directly with your modules and upcoming academic deadlines.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Live AI Tutor Box -->
+                <div class="sandbox-card ai-sandbox">
+                    <div class="sandbox-card-header">
+                        <span class="sandbox-badge purple-badge">
+                            <svg class="icon-small" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg> AI Assistant
+                        </span>
+                        <h3>AI Study Tutor</h3>
+                    </div>
+                    <div class="sandbox-box sandbox-chat-box">
+                        <div class="sandbox-chat-messages" id="sandboxChatMessages">
+                            <!-- Injected by JS -->
+                        </div>
+                        <div class="sandbox-chips">
+                            <button class="sandbox-chip" data-prompt="Summarize Web Development notes">Summarize</button>
+                            <button class="sandbox-chip" data-prompt="Generate a practice MCQ quiz">Practice MCQ</button>
+                        </div>
+                        <div class="sandbox-chat-input-row">
+                            <input type="text" id="sandboxChatInput" placeholder="Ask a study question..." aria-label="Ask AI">
+                            <button class="btn btn-primary" style="padding: 6px 12px; font-size: 13px;" id="sandboxChatSendBtn">Send</button>
+                        </div>
+                    </div>
+                    <div class="sandbox-desc">
+                        <p>Ask the AI Study Tutor to summarize key concepts or generate custom practice quizzes from your study vaults. Runs securely under your account profile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pricing Plans</span>
+                <h2 class="section-title">Simple, transparent pricing</h2>
+                <p class="section-subtitle">Start organizing your studies for free, and upgrade whenever you need more AI credits, larger file uploads, or cloud connections.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Free Plan (Featured Tier) -->
+                <div class="pricing-card free-featured">
+                    <div class="pricing-featured-badge">Free Forever</div>
+                    <h3>Free Scholar</h3>
+                    <div class="price-container">
+                        <span class="currency">$</span>
+                        <span class="price-amount">0</span>
+                        <span class="price-period">/ month</span>
+                    </div>
+                    <p class="plan-desc">Perfect for students to organize notes, plan study sessions, and run basic AI summaries.</p>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>50 MB</strong> Secure Storage Space</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>20 AI Credits</strong> per month</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Up to <strong>3 Active Modules</strong></span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Notion-Style Rich Text Editor</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Pomodoro Focus Planner & Tasks</span>
+                        </li>
+                        <li class="disabled">
+                            <svg class="icon-pricing-cross" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <span>Google Drive Integration</span>
+                        </li>
+                        <li class="disabled">
+                            <svg class="icon-pricing-cross" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <span>Unlimited File Vault Storage</span>
+                        </li>
+                    </ul>
+                    <a href="https://notebase.isharabandara.com/sign-up" class="btn btn-primary pricing-btn">Join for Free</a>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="pricing-card">
+                    <h3>Academic Pro</h3>
+                    <div class="price-container">
+                        <span class="currency">$</span>
+                        <span class="price-amount">4.99</span>
+                        <span class="price-period">/ month</span>
+                    </div>
+                    <p class="plan-desc">For serious learners needing direct Google Drive sync and higher AI document limits.</p>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>2 GB</strong> Secure Storage (Expandable)</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>200 AI Credits</strong> per month</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Google Drive Connection</strong> API</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Unlimited</strong> Study Modules</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Files upload up to <strong>25 MB</strong> each</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Classmates Collaboration Feed</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Priority email support channels</span>
+                        </li>
+                    </ul>
+                    <a href="https://notebase.isharabandara.com/sign-up" class="btn btn-outline pricing-btn">Start for Free</a>
+                </div>
+                
+                <!-- Elite Plan -->
+                <div class="pricing-card">
+                    <h3>Ultimate Elite</h3>
+                    <div class="price-container">
+                        <span class="currency">$</span>
+                        <span class="price-amount">9.99</span>
+                        <span class="price-period">/ month</span>
+                    </div>
+                    <p class="plan-desc">For heavy research, team studies, and ultimate AI context sizes.</p>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>10 GB</strong> Secure Storage</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>1000 AI Credits</strong> per month</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Google Drive Connection</strong> API</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Unlimited</strong> Modules & uploads</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Files upload up to <strong>100 MB</strong> each</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Custom AI prompts formatting</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>24/7 Priority support agent chat</span>
+                        </li>
+                    </ul>
+                    <a href="https://notebase.isharabandara.com/sign-up" class="btn btn-outline pricing-btn">Start for Free</a>
+                </div>
+            </div>
+            
+            <div class="pricing-notice">
+                <p>
+                    <svg class="icon-small" style="margin-right: 4px; display: inline-block; vertical-align: middle;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Note: Paid subscriptions are informational only. Subscriptions will be integrated upon official release.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack / Integrations Section -->
+    <section class="section tech-section" id="tech">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Under the Hood</span>
+                <h2 class="section-title">Engineered for performance & reliability</h2>
+                <p class="section-subtitle">NoteBase leverages modern cloud technologies to ensure your notes are backed up, encrypted, and accessible instantly.</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg class="icon-tech" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <h4>Clerk Auth</h4>
+                    <p>Industrial-grade authentication ensuring only you can access your notes and database. Supports rapid email signups.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg class="icon-tech" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                    </div>
+                    <h4>Google Drive API</h4>
+                    <p>Integrates with Google Drive storage to upload past paper PDFs and images. Your study guides are synced reliably.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg class="icon-tech" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                    </div>
+                    <h4>Firebase Storage</h4>
+                    <p>Powers rapid assets loading and note attachments hosting so files open instantly when revising in the library.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg class="icon-tech" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4>SWR Caching</h4>
+                    <p>Data is pre-fetched and updated optimistically in the background, making the UI feel fast and responsive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container cta-container">
+            <div class="cta-card">
+                <div class="cta-glow"></div>
+                <h2>Ready to streamline your study routine?</h2>
+                <p>Join hundreds of university students who use NoteBase to organize, summarize, and collaborate on study materials.</p>
+                <div class="cta-buttons">
+                    <a href="https://notebase.isharabandara.com/sign-up" class="btn btn-primary btn-lg">Get Started for Free</a>
+                    <a href="https://notebase.isharabandara.com" class="btn btn-outline btn-lg">Log In to Workspace</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <div class="logo-icon-container">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" /></svg>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-text-note">Note</span><span class="logo-text-base">Base</span>
+                    </div>
+                </a>
+                <p class="footer-desc">Your central hub for academic organization, Notion-style editing, and peer collaboration.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-group">
+                    <h5>Application</h5>
+                    <a href="https://notebase.isharabandara.com">Workspace</a>
+                    <a href="https://notebase.isharabandara.com/sign-in">Sign In</a>
+                    <a href="https://notebase.isharabandara.com/sign-up">Sign Up</a>
+                </div>
+                <div class="footer-group">
+                    <h5>Developer</h5>
+                    <a href="https://isharabandara.com/about" target="_blank">About Me</a>
+                    <a href="https://isharabandara.com/portfolio" target="_blank">Other Work</a>
+                    <a href="https://isharabandara.com/contact" target="_blank">Contact Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NoteBase. A Software Solution designed and developed by <a href="https://isharabandara.com" target="_blank" class="author-link">Ishara Bandara</a>. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
