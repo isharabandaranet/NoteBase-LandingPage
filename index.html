@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NoteBase | Your Ultimate Academic Workspace</title>
     <meta name="description" content="Organize your studies, write Notion-style notes, plan with Pomodoro, and collaborate with classmates on NoteBase. Created by Ishara Bandara.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -307,32 +309,7 @@
             </div>
 
             <div class="playground-grid">
-                <!-- Card 1: Live Pomodoro Box -->
-                <div class="sandbox-card pomodoro-sandbox">
-                    <div class="sandbox-card-header">
-                        <span class="sandbox-badge red-badge">
-                            <svg class="icon-small" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Focus Timer
-                        </span>
-                        <h3>Focus Timer</h3>
-                    </div>
-                    <div class="sandbox-box pomodoro-timer-box">
-                        <div class="timer-modes">
-                            <button class="timer-mode-btn active" data-mode="focus">Focus</button>
-                            <button class="timer-mode-btn" data-mode="shortBreak">Short Break</button>
-                            <button class="timer-mode-btn" data-mode="longBreak">Long Break</button>
-                        </div>
-                        <div class="timer-display" id="timerDisplay">25:00</div>
-                        <div class="timer-controls">
-                            <button class="btn btn-primary" id="timerStartBtn">Start</button>
-                            <button class="btn btn-secondary" id="timerResetBtn">Reset</button>
-                        </div>
-                    </div>
-                    <div class="sandbox-desc">
-                        <p>The standard Pomodoro method helps sustain peak focus. Once you create an account, NoteBase tracks your weekly study duration and graphs it dynamically.</p>
-                    </div>
-                </div>
-
-                <!-- Card 2: Live Module Creator Box -->
+                <!-- Card 1: Live Module Creator Box -->
                 <div class="sandbox-card module-sandbox">
                     <div class="sandbox-card-header">
                         <span class="sandbox-badge blue-badge">
@@ -351,6 +328,32 @@
                     </div>
                     <div class="sandbox-desc">
                         <p>Organize your academic syllabus into modules. In the actual app, you can upload past papers and typed slides directly under each corresponding Module folder.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Live AI Tutor Box -->
+                <div class="sandbox-card ai-sandbox">
+                    <div class="sandbox-card-header">
+                        <span class="sandbox-badge purple-badge">
+                            <svg class="icon-small" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg> AI Assistant
+                        </span>
+                        <h3>AI Study Tutor</h3>
+                    </div>
+                    <div class="sandbox-box sandbox-chat-box">
+                        <div class="sandbox-chat-messages" id="sandboxChatMessages">
+                            <!-- Injected by JS -->
+                        </div>
+                        <div class="sandbox-chips">
+                            <button class="sandbox-chip" data-prompt="Summarize Web Development notes">Summarize</button>
+                            <button class="sandbox-chip" data-prompt="Generate a practice MCQ quiz">Practice MCQ</button>
+                        </div>
+                        <div class="sandbox-chat-input-row">
+                            <input type="text" id="sandboxChatInput" placeholder="Ask a study question..." aria-label="Ask AI">
+                            <button class="btn btn-primary" style="padding: 6px 12px; font-size: 13px;" id="sandboxChatSendBtn">Send</button>
+                        </div>
+                    </div>
+                    <div class="sandbox-desc">
+                        <p>Ask the AI Study Tutor to summarize key concepts or generate custom practice quizzes from your study vaults. Runs securely under your account profile.</p>
                     </div>
                 </div>
 
@@ -376,29 +379,28 @@
                     </div>
                 </div>
 
-                <!-- Card 4: Live AI Tutor Box -->
-                <div class="sandbox-card ai-sandbox">
+                <!-- Card 4: Live Pomodoro Box -->
+                <div class="sandbox-card pomodoro-sandbox">
                     <div class="sandbox-card-header">
-                        <span class="sandbox-badge purple-badge">
-                            <svg class="icon-small" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg> AI Assistant
+                        <span class="sandbox-badge red-badge">
+                            <svg class="icon-small" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Focus Timer
                         </span>
-                        <h3>AI Study Tutor</h3>
+                        <h3>Focus Timer</h3>
                     </div>
-                    <div class="sandbox-box sandbox-chat-box">
-                        <div class="sandbox-chat-messages" id="sandboxChatMessages">
-                            <!-- Injected by JS -->
+                    <div class="sandbox-box pomodoro-timer-box">
+                        <div class="timer-modes">
+                            <button class="timer-mode-btn active" data-mode="focus">Focus</button>
+                            <button class="timer-mode-btn" data-mode="shortBreak">Short Break</button>
+                            <button class="timer-mode-btn" data-mode="longBreak">Long Break</button>
                         </div>
-                        <div class="sandbox-chips">
-                            <button class="sandbox-chip" data-prompt="Summarize Web Development notes">Summarize</button>
-                            <button class="sandbox-chip" data-prompt="Generate a practice MCQ quiz">Practice MCQ</button>
-                        </div>
-                        <div class="sandbox-chat-input-row">
-                            <input type="text" id="sandboxChatInput" placeholder="Ask a study question..." aria-label="Ask AI">
-                            <button class="btn btn-primary" style="padding: 6px 12px; font-size: 13px;" id="sandboxChatSendBtn">Send</button>
+                        <div class="timer-display" id="timerDisplay">25:00</div>
+                        <div class="timer-controls">
+                            <button class="btn btn-primary" id="timerStartBtn">Start</button>
+                            <button class="btn btn-secondary" id="timerResetBtn">Reset</button>
                         </div>
                     </div>
                     <div class="sandbox-desc">
-                        <p>Ask the AI Study Tutor to summarize key concepts or generate custom practice quizzes from your study vaults. Runs securely under your account profile.</p>
+                        <p>The standard Pomodoro method helps sustain peak focus. Once you create an account, NoteBase tracks your weekly study duration and graphs it dynamically.</p>
                     </div>
                 </div>
             </div>
